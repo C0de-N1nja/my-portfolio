@@ -1,0 +1,240 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F7F7;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    height: 50px;
+    background-color: #14532D;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #C8E6C9;
+    margin-right: 30px;
+    transition: transform 0.3s ease-in;
+}
+
+#name {
+    color: #F9F7F7;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    margin-right: 65%;
+    justify-content: left;
+}
+
+#pages {
+    font-weight: 500;
+}
+
+#name:hover {
+    color: #C8E6C9;
+}
+
+#pages:hover {
+    color: #2E7D32;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #2E7D32;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+/* Buttons Section */
+.buttons button {
+    background-color: #FF6347;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #FF4500;
+    transform: translateY(-5px);
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 20px;
+}
+
+.skill {
+    background-color: #2E7D32;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F9F7F7;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #2E7D32;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact-us {
+    padding: 50px 20px;
+    background-color: #2E7D32;
+    color: white;
+}
+
+#contact-us h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #FF6347;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FF4500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2E7D32;
+    color: white;
+}
