@@ -1,119 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rehan Rashid | Cybersecurity & Pen Testing</title>
     <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <div class="header">
-        <div class="navbar">
-            <a href="index.html" id="name">Muhammad Rehan</a>
-            <a href="#home" id="pages">Home</a>
-            <a href="#skills" id="pages">Skills</a>
-            <a href="#projects" id="pages">Projects</a>
-            <a href="#contact-us" id="pages">Contact Me</a>
-        </div>
-    </div>
 
-    <!-- Home Section -->
-    <div class="content" id="home">
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Welcome to My Personal Portfolio</h1>
-                <p>Hi, I'm <span>Muhammad Rehan </span>, a Creative Programmer and passionate about Linux
-                    Administration. Explore my projects, skills, and get in touch!</p>
-                <div class="buttons">
-                    <button>Get in Touch</button>
-                    <button>Download CV</button>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-logo">MRR.</a> <!-- Your Initials as a cool logo -->
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ======== HERO SECTION ======== -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subheading">Muhammad Rehan Rashid</p>
+                <h1 class="hero-heading">
+                    I build secure digital systems & hunt for vulnerabilities.
+                </h1>
+                <p class="hero-description">
+                    A final year Computer Science student specializing in penetration testing and network security, turning theoretical knowledge into practical, real-world solutions.
+                </p>
+                <a href="projects.html" class="button-primary">Explore My Work</a>
+            </div>
+        </section>
+
+        <!-- ======== FEATURED PROJECTS SECTION ======== -->
+        <section class="featured-projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="project-grid">
+                    
+                    <!-- Project Card 1 -->
+                    <a href="#" class="project-card"> <!-- Link to project-detail-osint.html later -->
+                        <img src="images/osint-dashboard-preview.jpg" alt="OSINT Recon Dashboard Visual">
+                        <div class="card-content">
+                            <h3>OSINT Recon Dashboard</h3>
+                            <p>An advanced intelligence gathering platform with a real-time dashboard.</p>
+                            <span class="view-project-link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <!-- Project Card 2 -->
+                    <a href="#" class="project-card"> <!-- Link to project-detail-toolkit.html later -->
+                        <img src="images/toolkit-preview.jpg" alt="Ethical Hacking Toolkit Visual">
+                        <div class="card-content">
+                            <h3>Ethical Hacking Toolkit</h3>
+                            <p>An educational suite of security tools built in Python for hands-on learning.</p>
+                            <span class="view-project-link">View Project →</span>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="all-projects-link">
+                    <a href="projects.html" class="button-secondary">See All Projects</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="image.jpg" alt="Creative Programmer">
+        </section>
+
+        <!-- ======== ABOUT ME TEASER ======== -->
+        <section class="about-teaser">
+             <div class="container">
+                <h2>My Approach</h2>
+                <p>I thrive on understanding how systems can be broken in order to make them stronger. My passion lies at the intersection of offensive security and robust development, driven by continuous learning and hands-on practice.</p>
+                <a href="about.html" class="button-primary">More About Me</a>
+             </div>
+        </section>
+        
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Muhammad Rehan Rashid</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/muhammad-rehan-rashid-188809254" target="_blank">LinkedIn</a>
+                <a href="https://github.com/C0de-N1nja" target="_blank">GitHub</a>
+                <a href="https://tryhackme.com/p/M.Rehan" target="_blank">TryHackMe</a>
             </div>
         </div>
-    </div>
-
-    <!-- Skills Section -->
-    <div class="content" id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <h3>Operating Systems</h3>
-                <p>Kali, Parrot, Ubuntu</p>
-            </div>
-            <div class="skill">
-                <h3>Programming Languages</h3>
-                <p>C/C++, Python</p>
-            </div>
-
-            <div class="skill">
-                <h3>Game Development</h3>
-                <p>Unity, C#</p>
-            </div>
-            <div class="skill">
-                <h3>Problem Solving & Algorithms</h3>
-                <p>Data Structures, Algorithms</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="content" id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project">
-                <h3>Face Recognition with OpenCV (C++)</h3>
-                <p>A software designed to recognize faces and efficiently store them in a database, built using OpenCV
-                    and C++.</p>
-            </div>
-            <div class="project">
-                <h3>IoT-Based Learning System for Children using C++ and OOP</h3>
-                <p>A software that leverages IoT and C++ to create an interactive learning system for children, blending
-                    technology with education to inspire creativity and curiosity.</p>
-            </div>
-            <div class="project">
-                <h3>Tic Tac Toe Game</h3>
-                <p>A classic Tic Tac Toe game designed as a Player vs. Player experience, blending intuitive controls
-                    with engaging design, with plans to expand into AI-driven gameplay.</p>
-            </div>
-            <div class="project">
-                <h3>Ball Rolling (Unity)</h3>
-                <p>A ball rolling game in Unity, featuring dynamic gameplay and interactive design, with a focus on
-                    smooth mechanics and plans for further development.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="content" id="contact-us">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:rehan@gmail.com">rehanrashid@gmail.com</a></p>
-                <p><strong>Phone:</strong> +92 330 1234567</p>
-                <p><strong>Location:</strong> Gujranwala, Pakistan</p>
-            </div>
-            <div class="contact-form">
-                <h3>Send a Message</h3>
-                <form action="#" method="POST">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Rehan Rashid. All rights reserved.</p>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
