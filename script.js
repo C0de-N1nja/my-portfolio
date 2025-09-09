@@ -1,31 +1,21 @@
-// Mobile Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// Simple "Fade-in on Scroll" Animation
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+// 1. Select all the elements we want to fade in
+const elementsToAnimate = document.querySelectorAll('section, footer');
 
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+// 2. Create the Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    // 3. Loop over the entries
+    entries.forEach(entry => {
+        // 4. If the element is visible
+        if (entry.isIntersecting) {
+            // 5. Add the 'is-visible' class
+            entry.target.classList.add('is-visible');
+        }
     });
 });
 
-// Contact Form (EmailJS)
-document.getElementById('contact-form')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Initialize EmailJS (replace with your keys after signing up at emailjs.com)
-    emailjs.init("YOUR_USER_ID");
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-        .then(() => {
-            alert('Message sent successfully!');
-            this.reset();
-        }, (error) => {
-            alert('Failed to send message: ' + JSON.stringify(error));
-        });
+// 6. Loop over the elements and observe each one
+elementsToAnimate.forEach(element => {
+    observer.observe(element);
 });

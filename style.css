@@ -298,3 +298,113 @@ a:hover {
 .footer-links a {
     margin-left: 1.5rem;
 }
+
+/* ======== CONTACT PAGE SPECIFIC STYLES ======== */
+.contact-section {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contact-subheading {
+    color: var(--accent-green);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-heading {
+    font-size: clamp(40px, 6vw, 70px);
+}
+
+.contact-description {
+    max-width: 600px;
+    margin: 1.5rem auto 2.5rem;
+    color: var(--light-slate);
+    font-size: 1.1rem;
+}
+
+.button-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.socials-section {
+    padding: 4rem 0 6rem;
+}
+
+.socials-section h2 {
+    text-align: center;
+}
+
+.social-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.social-card {
+    background-color: var(--light-navy);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px -12px rgba(2, 12, 27, 0.7);
+    color: var(--accent-green);
+}
+
+.social-card h3 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-card:hover h3 {
+    color: var(--accent-green);
+}
+
+.social-card p {
+    color: var(--slate);
+}
+
+/* ======== RESPONSIVE STYLES (Basic example for smaller screens) ======== */
+@media (max-width: 768px) {
+    .main-nav ul {
+        /* In a future step, we could hide this and create a hamburger menu */
+        display: none; 
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-image {
+        grid-row: 1; /* Puts the image on top on mobile */
+        margin-bottom: 2rem;
+    }
+    .main-footer .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* ======== JAVASCRIPT ANIMATION STYLES ======== */
+section, footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.is-visible, footer.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
